@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-color);
+}
+
+a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+b {
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.contacts {
+  max-width: 255px;
+  font-size: 30px;
+}
