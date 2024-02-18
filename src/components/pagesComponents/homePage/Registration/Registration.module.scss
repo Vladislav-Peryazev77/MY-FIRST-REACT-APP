@@ -1,0 +1,60 @@
+@import "src/styles/variables.scss";
+
+.registration {
+  padding: 87px 0;
+  background-color: $accent-color;
+  color: $white-color;
+  line-height: 1.3;
+  background-image: url(assets/images/background-image-registration.png);
+  background-repeat: repeat-x;
+  background-position-y: 385px;
+
+  .wrapper {
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+
+    .text {
+      flex-basis: 476px;
+
+      .title {
+        font-size: 36px;
+      }
+
+      .description {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    .form {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 500px;
+
+      .input {
+        color: $primary-color-opacity70;
+        background-color: $secondary-white-color;
+        border-radius: 5px;
+        padding: 19px 20px;
+        // height: 64px;
+        // line-height: 1.4;
+        // flex-basis: 64px;
+        box-sizing: border-box;
+      }
+
+      .button {
+        padding: 19px 20px;
+        background-color: $primary-color;
+      }
+
+      .button:hover {
+        background-color: $button-dark-hover;
+      }
+    }
+  }
+}

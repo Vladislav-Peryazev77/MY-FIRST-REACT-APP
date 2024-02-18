@@ -1,0 +1,74 @@
+@import "src/styles/variables.scss";
+
+.wrapper {
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  .item {
+    cursor: pointer;
+    border-radius: 20px;
+    border: $primary-border;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 360px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 40px;
+
+    .itemTitle {
+      font-size: 30px;
+      position: relative;
+    }
+
+    .itemTitle::before,
+    .itemTitle::after {
+      position: absolute;
+      width: 19px;
+      height: 3px;
+      background-color: $primary-color;
+      content: "";
+      top: 50%;
+      transition: background-color 0.3s ease;
+      transform: translateY(-50%);
+    }
+
+    .itemTitle::before {
+      left: -33px;
+    }
+
+    .itemTitle::after {
+      right: -33px;
+    }
+
+    .price {
+      font-size: 50px;
+      margin-top: 63px;
+    }
+
+    .description {
+      margin-top: 20px;
+      margin-bottom: 61px;
+      text-align: center;
+    }
+
+    .button {
+      color: $white-color;
+      margin-top: auto;
+      align-self: stretch;
+    }
+  }
+
+  .item:hover {
+    color: $white-color;
+    background-color: $primary-color;
+  }
+
+  .item:hover .itemTitle::before,
+  .item:hover .itemTitle::after {
+    background-color: $white-color;
+  }
+}

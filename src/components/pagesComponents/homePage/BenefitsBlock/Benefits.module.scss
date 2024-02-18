@@ -1,0 +1,28 @@
+@import "src/styles/variables.scss";
+
+.benefits {
+  background-color: $grey-bg-color;
+  padding: 100px 0;
+
+  .wrapper {
+    margin-top: 60px;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .item {
+      flex-basis: 360px;
+
+      .itemTitle {
+        font-size: 24px;
+        position: relative;
+      }
+
+      .description {
+        color: $primary-color-opacity70;
+        margin-top: 20px;
+      }
+    }
+  }
+}
