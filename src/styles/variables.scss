@@ -1,14 +1,17 @@
+//---------COLORS-------------//
 $primary-color: #141024;
 $primary-color-opacity70: #141024b3;
 $primary-color-opacity8: #e9e9ea;
 $white-color: #fff;
 $accent-color: #d52027;
-$accent-color-hover: #cc3d42;
 $grey-bg-color: #f9f9f9;
-$primary-border-color: #14102433;
-$primary-border: 1px solid $primary-border-color;
 $secondary-white-color: #f6f6f6;
-$button-dark-hover: #1f1938;
 $grey-line-color: #e5e5e7;
 $grey-primary-color: #b8b7bd;
 $grey-secondary-color: #e7e6e8;
+//---------BORDER-COLORS-------//
+$primary-border-color: #14102433;
+$primary-border: 1px solid $primary-border-color;
+//---------HOVER-COLORS--------//
+$accent-color-hover: #cc3d42;
+$button-dark-hover: #1f1938;
