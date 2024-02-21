@@ -1,7 +1,7 @@
-import { Button } from "../../UIComponents/Button/Button";
-import styles from "./Packages.module.scss";
+import { Button } from "../../../UIComponents/Button";
+import styles from "./PackagesBlock.module.scss";
 
-export const Packages = () => {
+export const PackagesBlock = () => {
   return (
     <section className={styles.packages}>
       <div className="container">

@@ -1,6 +1,6 @@
-import styles from "./Benefits.module.scss";
+import styles from "./BenefitsBlock.module.scss";
 
-export const Benefits = () => {
+export const BenefitsBlock = () => {
   return (
     <section className={styles.benefits}>
       <div className="container">

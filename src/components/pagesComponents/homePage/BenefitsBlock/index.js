@@ -1,1 +1,1 @@
-import Benefits from "./Benefits";
+export { BenefitsBlock } from "./BenefitsBlock";

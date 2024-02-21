@@ -1,8 +1,8 @@
 import { Button } from "../../../UIComponents/Button/Button";
 import { Input } from "../../../UIComponents/Input/Input";
-import styles from "./Registration.module.scss";
+import styles from "./RegistrationBlock.module.scss";
 
-export const Registration = () => {
+export const RegistrationBlock = () => {
   return (
     <section className={styles.registration}>
       <div className="container">

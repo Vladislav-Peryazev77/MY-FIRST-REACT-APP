@@ -1,1 +1,1 @@
-import StatsBlock from "./StatsBlock";
+export { StatsBlock } from "./StatsBlock";
