@@ -1,5 +1,5 @@
+import { Button } from "../../../UIComponents/Button";
 import styles from "./PromoBlock.module.scss";
-import { Button } from "../../../UIComponents/Button/Button";
 
 export const PromoBlock = () => {
   return (

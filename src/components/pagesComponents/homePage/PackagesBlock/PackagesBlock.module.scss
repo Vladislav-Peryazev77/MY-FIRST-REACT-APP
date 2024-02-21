@@ -19,29 +19,39 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     padding: 40px;
 
+    &:hover {
+      color: $white-color;
+      background-color: $primary-color;
+    }
+
+    &:hover .itemTitle::before,
+    &:hover .itemTitle::after {
+      background-color: $white-color;
+    }
+
     .itemTitle {
       font-size: 30px;
       position: relative;
-    }
 
-    .itemTitle::before,
-    .itemTitle::after {
-      position: absolute;
-      width: 19px;
-      height: 3px;
-      background-color: $primary-color;
-      content: "";
-      top: 50%;
-      transition: background-color 0.3s ease;
-      transform: translateY(-50%);
-    }
+      &::before,
+      &::after {
+        position: absolute;
+        width: 19px;
+        height: 3px;
+        background-color: $primary-color;
+        content: "";
+        top: 50%;
+        transition: background-color 0.3s ease;
+        transform: translateY(-50%);
+      }
 
-    .itemTitle::before {
-      left: -33px;
-    }
+      &::before {
+        left: -33px;
+      }
 
-    .itemTitle::after {
-      right: -33px;
+      &::after {
+        right: -33px;
+      }
     }
 
     .price {
@@ -56,19 +66,12 @@
     }
 
     .button {
-      color: $white-color;
       margin-top: auto;
       align-self: stretch;
     }
-  }
 
-  .item:hover {
-    color: $white-color;
-    background-color: $primary-color;
-  }
-
-  .item:hover .itemTitle::before,
-  .item:hover .itemTitle::after {
-    background-color: $white-color;
+    .button__white {
+      color: $white-color;
+    }
   }
 }

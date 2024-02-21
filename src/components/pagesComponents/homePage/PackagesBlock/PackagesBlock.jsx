@@ -17,7 +17,12 @@ export const PackagesBlock = () => {
             <div className={styles.description}>
               УМК по робототехнике и программированию
             </div>
-            <Button additionalClassname={styles.button}>Оставить заявку</Button>
+            <Button
+              variant={styles.button__white}
+              additionalClassname={styles.button}
+            >
+              Оставить заявку
+            </Button>
           </div>
           <div className={styles.item}>
             <div className={styles.itemTitle}>
@@ -27,7 +32,12 @@ export const PackagesBlock = () => {
               <b>15.000 ₽</b>
             </div>
             <div className={styles.description}>УМК по робототехнике</div>
-            <Button additionalClassname={styles.button}>Оставить заявку</Button>
+            <Button
+              variant={styles.button__white}
+              additionalClassname={styles.button}
+            >
+              Оставить заявку
+            </Button>
           </div>
           <div className={styles.item}>
             <div className={styles.itemTitle}>
@@ -37,7 +47,12 @@ export const PackagesBlock = () => {
               <b>10.000 ₽</b>
             </div>
             <div className={styles.description}>УМК по программированию</div>
-            <Button additionalClassname={styles.button}>Оставить заявку</Button>
+            <Button
+              variant={styles.button__white}
+              additionalClassname={styles.button}
+            >
+              Оставить заявку
+            </Button>
           </div>
         </div>
       </div>

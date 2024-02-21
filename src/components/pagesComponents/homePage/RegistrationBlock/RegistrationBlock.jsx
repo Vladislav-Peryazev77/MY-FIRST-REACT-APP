@@ -1,5 +1,5 @@
-import { Button } from "../../../UIComponents/Button/Button";
-import { Input } from "../../../UIComponents/Input/Input";
+import { Button } from "../../../UIComponents/Button";
+import { Input } from "../../../UIComponents/Input";
 import styles from "./RegistrationBlock.module.scss";
 
 export const RegistrationBlock = () => {
@@ -31,7 +31,12 @@ export const RegistrationBlock = () => {
               type="email"
               additionalClassname={styles.input}
             />
-            <Button additionalClassname={styles.button}>Оформить заявку</Button>
+            <Button
+              variant={styles.button__dark}
+              additionalClassname={styles.button}
+            >
+              Оформить заявку
+            </Button>
           </form>
         </div>
       </div>

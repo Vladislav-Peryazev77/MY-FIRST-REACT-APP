@@ -36,15 +36,11 @@
       width: 100%;
       max-width: 500px;
 
-      .input {
-        color: $primary-color-opacity70;
-        background-color: $secondary-white-color;
-        border-radius: 5px;
+      .button {
         padding: 19px 20px;
       }
 
-      .button {
-        padding: 19px 20px;
+      .button__dark {
         background-color: $primary-color;
       }
 
