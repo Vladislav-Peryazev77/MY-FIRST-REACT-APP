@@ -1,0 +1,1 @@
+export { CoachesBlock } from "./CoachesBlock";

@@ -1,6 +1,7 @@
-import "./styles/App.scss";
-import { Home } from "./pages/Home";
 import { Layout } from "./pages/Layout";
+import { Home } from "./pages/Home";
+
+import "./styles/App.scss";
 
 function App() {
   return (

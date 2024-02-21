@@ -1,0 +1,8 @@
+@import "src/styles/variables.scss";
+
+.input {
+  color: $primary-color-opacity70;
+  background-color: $secondary-white-color;
+  border-radius: 5px;
+  padding: 19px 20px;
+}
