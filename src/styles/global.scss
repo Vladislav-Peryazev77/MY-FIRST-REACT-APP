@@ -1,3 +1,5 @@
+@import "src/styles/variables.scss";
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,13 +9,13 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 a {
   white-space: nowrap;
   text-decoration: none;
-  color: var(--white-color);
+  color: $white-color;
   font-weight: 600;
 }
 
@@ -51,4 +53,40 @@ section {
 .container {
   margin: 0 auto;
   max-width: 1160px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  bottom: 0;
+  top: unset;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: $primary-color;
+}
+
+.swiper-button-next {
+  right: 13px;
+}
+
+.swiper-button-prev {
+  left: unset;
+  right: 57px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px;
+  color: $white-color;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  width: 360px;
+  background-color: $primary-color-opacity8;
+}
+
+.swiper-scrollbar-drag {
+  width: 260px;
+  background-color: $primary-color;
 }

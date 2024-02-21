@@ -1,4 +1,5 @@
 import { BenefitsBlock } from "../../components/pagesComponents/homePage/BenefitsBlock";
+import { CoachesBlock } from "../../components/pagesComponents/homePage/CoachesBlock/CoachesBlock";
 import { PackagesBlock } from "../../components/pagesComponents/homePage/PackagesBlock";
 
 import { PromoBlock } from "../../components/pagesComponents/homePage/PromoBlock";
@@ -12,6 +13,7 @@ export const Home = () => {
       <PromoBlock />
       <StatsBlock />
       <BenefitsBlock />
+      <CoachesBlock />
       <PackagesBlock />
       <RegistrationBlock />
     </>
