@@ -84,9 +84,17 @@ section {
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   width: 360px;
   background-color: $primary-color-opacity8;
+  cursor: pointer;
 }
 
 .swiper-scrollbar-drag {
   width: 260px;
   background-color: $primary-color;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+    height: calc(100% + 2px);
+    top: -2px;
+  }
 }

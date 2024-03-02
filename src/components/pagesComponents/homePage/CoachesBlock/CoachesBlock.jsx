@@ -5,7 +5,7 @@ import coachesData from "../../../../api/coaches.json";
 import { coachesImages } from "../../../../assets/images";
 import { Button } from "../../../UIComponents/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Scrollbar } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,18 +19,16 @@ export const CoachesBlock = () => {
         <h2>Профессиональные тренеры</h2>
         <Swiper
           className={styles.slider}
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Scrollbar]}
           spaceBetween={40}
           slidesPerView={3}
           navigation
-          // loop
           freeMode
-          // pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
         >
           {coachesData.map((coach) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={coach.id}>
                 <div className={styles.item}>
                   <img
                     className={styles.photo}
@@ -39,10 +37,7 @@ export const CoachesBlock = () => {
                   />
                   <div className={styles.title}>{coach.title}</div>
                   <div className={styles.jobtitle}>{coach.jobtitle}</div>
-                  <Button
-                    variant={styles.button__red}
-                    additionalClassname={styles.button}
-                  >
+                  <Button variant="link" additionalClassname={styles.button}>
                     Подробнее
                   </Button>
                 </div>

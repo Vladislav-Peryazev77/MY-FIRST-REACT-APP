@@ -16,3 +16,9 @@
     background-color: $accent-color-hover;
   }
 }
+
+.link {
+  color: $accent-color;
+  background-color: unset;
+  padding: unset;
+}
