@@ -4,8 +4,8 @@ export const Button = ({ additionalClassname, children, variant }) => {
     switch (true) {
       case variant === "link":
         return `${styles.button} ${styles.link}`;
-      case variant === "white":
-        return `${styles.button} ${styles.white}`;
+      case variant === "dark":
+        return `${styles.button} ${styles.dark}`;
       default:
         return styles.button;
     }

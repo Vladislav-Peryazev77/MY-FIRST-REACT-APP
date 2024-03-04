@@ -1,0 +1,1 @@
+export { CoachItem } from "./CoachItem";

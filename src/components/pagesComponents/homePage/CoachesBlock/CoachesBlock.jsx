@@ -2,10 +2,9 @@ import React from "react";
 import styles from "./CoachesBlock.module.scss";
 
 import coachesData from "../../../../api/coaches.json";
-import { coachesImages } from "../../../../assets/images";
-import { Button } from "../../../UIComponents/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
+import { CoachItem } from "./components";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,7 +13,7 @@ import "swiper/css/scrollbar";
 
 export const CoachesBlock = () => {
   return (
-    <section className={styles.coaches}>
+    <section id="coaches" className={styles.coaches}>
       <div className="container">
         <h2>Профессиональные тренеры</h2>
         <Swiper
@@ -26,24 +25,11 @@ export const CoachesBlock = () => {
           freeMode
           scrollbar={{ draggable: true }}
         >
-          {coachesData.map((coach) => {
-            return (
-              <SwiperSlide key={coach.id}>
-                <div className={styles.item}>
-                  <img
-                    className={styles.photo}
-                    src={coachesImages[coach.imageName]}
-                    alt={coach.title}
-                  />
-                  <div className={styles.title}>{coach.title}</div>
-                  <div className={styles.jobtitle}>{coach.jobtitle}</div>
-                  <Button variant="link" additionalClassname={styles.button}>
-                    Подробнее
-                  </Button>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+          {coachesData.map((coach) => (
+            <SwiperSlide key={coach.id}>
+              <CoachItem coach={coach} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

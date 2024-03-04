@@ -3,7 +3,7 @@ import styles from "./PackagesBlock.module.scss";
 
 export const PackagesBlock = () => {
   return (
-    <section className={styles.packages}>
+    <section id="packages" className={styles.packages}>
       <div className="container">
         <h2 className={styles.title}>Выберите нужный пакет</h2>
         <div className={styles.wrapper}>
@@ -17,12 +17,7 @@ export const PackagesBlock = () => {
             <div className={styles.description}>
               УМК по робототехнике и программированию
             </div>
-            <Button
-              variant={styles.button__white}
-              additionalClassname={styles.button}
-            >
-              Оставить заявку
-            </Button>
+            <Button additionalClassname={styles.button}>Оставить заявку</Button>
           </div>
           <div className={styles.item}>
             <div className={styles.itemTitle}>
@@ -32,12 +27,7 @@ export const PackagesBlock = () => {
               <b>15.000 ₽</b>
             </div>
             <div className={styles.description}>УМК по робототехнике</div>
-            <Button
-              variant={styles.button__white}
-              additionalClassname={styles.button}
-            >
-              Оставить заявку
-            </Button>
+            <Button additionalClassname={styles.button}>Оставить заявку</Button>
           </div>
           <div className={styles.item}>
             <div className={styles.itemTitle}>
@@ -47,12 +37,7 @@ export const PackagesBlock = () => {
               <b>10.000 ₽</b>
             </div>
             <div className={styles.description}>УМК по программированию</div>
-            <Button
-              variant={styles.button__white}
-              additionalClassname={styles.button}
-            >
-              Оставить заявку
-            </Button>
+            <Button additionalClassname={styles.button}>Оставить заявку</Button>
           </div>
         </div>
       </div>
