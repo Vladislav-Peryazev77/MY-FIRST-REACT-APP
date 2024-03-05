@@ -20,7 +20,7 @@
         border-radius: 20px;
       }
 
-      .title {
+      .itemTitle {
         font-size: 24px;
         margin-top: 20px;
       }
@@ -37,7 +37,27 @@
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  top: 0;
+@media (max-width: 768px) {
+  .coaches {
+    .title {
+      font-size: 30px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .slider {
+      .itemTitle {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      .jobtitle {
+        font-size: 14px;
+      }
+
+      .button {
+        font-size: 16px;
+      }
+    }
+  }
 }

@@ -10,7 +10,7 @@ export const CoachItem = ({ coach }) => {
         src={coachesImages[coach.imageName]}
         alt={coach.title}
       />
-      <div className={styles.title}>{coach.title}</div>
+      <div className={styles.itemTitle}>{coach.title}</div>
       <div className={styles.jobtitle}>{coach.jobtitle}</div>
       <Button variant="link" additionalClassname={styles.button}>
         Подробнее

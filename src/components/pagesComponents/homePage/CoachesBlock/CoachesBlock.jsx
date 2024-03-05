@@ -15,7 +15,7 @@ export const CoachesBlock = () => {
   return (
     <section id="coaches" className={styles.coaches}>
       <div className="container">
-        <h2>Профессиональные тренеры</h2>
+        <h2 className={styles.title}>Профессиональные тренеры</h2>
         <Swiper
           className={styles.slider}
           modules={[Navigation, Scrollbar]}

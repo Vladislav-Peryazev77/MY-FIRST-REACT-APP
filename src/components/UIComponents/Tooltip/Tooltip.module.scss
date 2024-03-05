@@ -1,0 +1,53 @@
+@import "src/styles/variables.scss";
+
+.tooltip {
+  padding: 10px;
+
+  &:hover .description {
+    display: block;
+  }
+}
+
+.icon {
+  background-color: $grey-secondary-color;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.iconPosition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.description {
+  display: none;
+  position: absolute;
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: #fff;
+  bottom: 100%;
+  left: 0;
+  border-radius: 5px;
+  width: max-content;
+  max-width: 251px;
+}
+
+@media (max-width: 1200px) {
+  .description {
+    left: -95px;
+  }
+}
+
+@media (max-width: 425px) {
+  .description {
+    font-size: 14px;
+    max-width: 224px;
+    left: -130px;
+  }
+}
