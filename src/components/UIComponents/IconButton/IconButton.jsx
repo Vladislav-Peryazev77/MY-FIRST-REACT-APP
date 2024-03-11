@@ -1,7 +1,7 @@
 import styles from "./IconButton.module.scss";
 
-export const IconButton = ({ src, alt, visibility, additionalClassname }) => {
-  const buttonClassname = `${visibility} ${styles.button} ${
+export const IconButton = ({ visibility, additionalClassname, src, alt }) => {
+  const buttonClassname = `${styles.button} ${visibility} ${
     additionalClassname ? additionalClassname : ""
   }`;
 
