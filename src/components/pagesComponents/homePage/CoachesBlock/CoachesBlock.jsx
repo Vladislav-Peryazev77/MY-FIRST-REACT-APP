@@ -23,7 +23,7 @@ export const CoachesBlock = () => {
           {...swiperConfig}
         >
           {coachesData.map((coach) => (
-            <SwiperSlide key={coach.id}>
+            <SwiperSlide key={coach.id} className={styles.slide}>
               <CoachItem coach={coach} />
             </SwiperSlide>
           ))}
