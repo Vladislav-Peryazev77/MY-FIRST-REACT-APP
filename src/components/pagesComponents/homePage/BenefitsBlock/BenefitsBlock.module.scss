@@ -17,11 +17,6 @@
       .itemTitle {
         font-size: 24px;
         position: relative;
-
-        .tooltip {
-          position: absolute;
-          margin-top: -10px;
-        }
       }
 
       .description {
@@ -71,7 +66,7 @@
   .benefits {
     .title {
       font-size: 30px;
-      line-height: 1.4;
+      line-height: 42px;
       text-align: center;
     }
 
@@ -81,8 +76,6 @@
       text-align: center;
 
       .item {
-        // justify-content: center;
-
         .itemTitle {
           font-size: 20px;
         }

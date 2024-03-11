@@ -1,7 +1,8 @@
 @import "src/styles/variables.scss";
-
 .tooltip {
   padding: 10px;
+  position: absolute;
+  margin-top: -10px;
 
   &:hover .description {
     display: block;

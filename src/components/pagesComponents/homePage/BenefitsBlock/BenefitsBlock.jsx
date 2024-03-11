@@ -24,12 +24,7 @@ export const BenefitsBlock = () => {
           <div className={styles.item}>
             <h3 className={styles.itemTitle}>
               Практику
-              <Tooltip
-                additionalClassname={styles.tooltip}
-                src="src/assets/icons/i-icon.svg"
-              >
-                При наличии свободных мест
-              </Tooltip>
+              <Tooltip>При наличии свободных мест</Tooltip>
             </h3>
             <div className={styles.description}>
               Возможность пройти практику по преподаванию робототехники на базе

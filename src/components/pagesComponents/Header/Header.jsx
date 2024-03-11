@@ -18,7 +18,7 @@ export const Header = () => {
             Стоимость
           </a>
         </nav>
-        <a href="tel:88000001122" className={`${styles.contacts} contacts`}>
+        <a href="tel:88000001122" className={`contacts ${styles.contacts}`}>
           +7 800 000 11 22
         </a>
         <div className={styles.buttons}>

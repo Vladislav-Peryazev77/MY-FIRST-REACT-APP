@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./CoachesBlock.module.scss";
 
 import coachesData from "../../../../api/coaches.json";
 import { swiperConfig } from "../../../../lib";
@@ -11,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import styles from "./CoachesBlock.module.scss";
 
 export const CoachesBlock = () => {
   return (
