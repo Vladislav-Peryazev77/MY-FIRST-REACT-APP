@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./CoachesBlock.module.scss";
 
 import coachesData from "../../../../api/coaches.json";
+import { swiperConfig } from "../../../../lib";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
 import { CoachItem } from "./components";
@@ -19,11 +20,7 @@ export const CoachesBlock = () => {
         <Swiper
           className={styles.slider}
           modules={[Navigation, Scrollbar]}
-          spaceBetween={40}
-          slidesPerView={3}
-          navigation
-          freeMode
-          scrollbar={{ draggable: true }}
+          {...swiperConfig}
         >
           {coachesData.map((coach) => (
             <SwiperSlide key={coach.id}>

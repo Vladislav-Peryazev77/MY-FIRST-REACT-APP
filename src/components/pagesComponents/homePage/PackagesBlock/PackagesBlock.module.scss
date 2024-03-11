@@ -71,3 +71,54 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+    line-height: 1.4;
+  }
+
+  .packages-wrapper {
+    margin-top: 40px;
+
+    .item:hover {
+      color: var(--primary-color);
+      background-color: var(--white-color);
+    }
+
+    .item:hover .itemTitle::before,
+    .item:hover .itemTitle::after {
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .wrapper {
+    gap: 30px;
+
+    .item {
+      flex-basis: 300px;
+      padding: 40px 20px;
+
+      .price {
+        margin-top: 40px;
+      }
+
+      .description {
+        margin-bottom: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ export const Home = () => {
       <BenefitsBlock />
       <CoachesBlock />
       <PackagesBlock />
-      {/* <RegistrationBlock /> */}
+      <RegistrationBlock />
     </>
   );
 };

@@ -6,7 +6,8 @@
 
   .slider {
     display: flex;
-    height: 746px;
+    max-height: 746px;
+    height: calc(100vw * 0.7);
     margin-top: 60px;
 
     .item {
@@ -46,17 +47,37 @@
     }
 
     .slider {
-      .itemTitle {
-        font-size: 20px;
-        line-height: 1.4;
-      }
+      height: 100%;
 
-      .jobtitle {
-        font-size: 14px;
-      }
+      .item {
+        .itemTitle {
+          font-size: 20px;
+          line-height: 1.4;
+        }
 
-      .button {
-        font-size: 16px;
+        .jobtitle {
+          font-size: 14px;
+        }
+
+        .button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .coaches {
+    .slider {
+      margin-left: -10px;
+      width: calc(100% + 20px);
+      padding: 0 10px;
+
+      .item {
+        .photo {
+          min-width: 220px;
+        }
       }
     }
   }

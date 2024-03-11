@@ -27,8 +27,9 @@ export const BenefitsBlock = () => {
               <Tooltip
                 additionalClassname={styles.tooltip}
                 src="src/assets/icons/i-icon.svg"
-                text="При наличии свободных мест"
-              />
+              >
+                При наличии свободных мест
+              </Tooltip>
             </h3>
             <div className={styles.description}>
               Возможность пройти практику по преподаванию робототехники на базе
