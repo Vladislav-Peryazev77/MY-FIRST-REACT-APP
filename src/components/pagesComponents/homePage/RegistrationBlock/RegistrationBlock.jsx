@@ -31,10 +31,7 @@ export const RegistrationBlock = () => {
               type="email"
               additionalClassname={styles.input}
             />
-            <Button
-              variant={styles.button__dark}
-              additionalClassname={styles.button}
-            >
+            <Button variant="dark" additionalClassname={styles.button}>
               Оформить заявку
             </Button>
           </form>

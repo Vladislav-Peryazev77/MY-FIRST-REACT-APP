@@ -12,15 +12,15 @@ export const PromoBlock = () => {
               Курсы повышения квалификации по робототехнике для педагогов
               начальной школы
             </div>
-            <Button additionalClassname={styles.button}>
-              Записаться на курс
-            </Button>
-            <img
-              className={styles.img}
-              src="src/assets/images/promo-girl.png"
-              alt="promo girl"
-            />
           </div>
+          <Button additionalClassname={styles.button}>
+            Записаться на курс
+          </Button>
+          <img
+            className={styles.img}
+            src="src/assets/images/promo-girl.png"
+            alt="promo girl"
+          />
         </div>
       </div>
     </section>

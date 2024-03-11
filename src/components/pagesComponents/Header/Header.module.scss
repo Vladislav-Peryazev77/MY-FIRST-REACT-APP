@@ -20,5 +20,57 @@
       font-size: 20px;
       list-style: none;
     }
+
+    .buttons {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .header {
+    padding: 15px;
+
+    .content {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100vw;
+        height: 100dvh;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        font-size: 30px;
+        background-color: var(--primary-color);
+        transition: transform 0.3s ease;
+      }
+
+      .hidden {
+        transform: translateY(-100dvh);
+      }
+
+      .contacts {
+        display: none;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding: 10px;
   }
 }

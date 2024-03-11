@@ -26,3 +26,64 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .benefits {
+    padding: 40px 0px;
+
+    .title {
+      text-align: center;
+    }
+
+    .wrapper {
+      justify-content: center;
+
+      .item {
+        flex-basis: 270px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    .title {
+      font-size: 40px;
+    }
+
+    .wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .item {
+        flex-basis: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .benefits {
+    .title {
+      font-size: 30px;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    .wrapper {
+      margin-top: 40px;
+      gap: 30px;
+      text-align: center;
+
+      .item {
+        .itemTitle {
+          font-size: 20px;
+        }
+
+        .description {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

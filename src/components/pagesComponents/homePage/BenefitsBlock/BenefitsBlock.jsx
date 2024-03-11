@@ -1,3 +1,4 @@
+import { Tooltip } from "../../../UIComponents/Tooltip";
 import styles from "./BenefitsBlock.module.scss";
 
 export const BenefitsBlock = () => {
@@ -21,7 +22,10 @@ export const BenefitsBlock = () => {
             </div>
           </div>
           <div className={styles.item}>
-            <h3 className={styles.itemTitle}>Практику</h3>
+            <h3 className={styles.itemTitle}>
+              Практику
+              <Tooltip>При наличии свободных мест</Tooltip>
+            </h3>
             <div className={styles.description}>
               Возможность пройти практику по преподаванию робототехники на базе
               R:ED LAB (в оффлайн или онлайн формате)

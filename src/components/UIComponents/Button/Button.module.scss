@@ -8,11 +8,31 @@
   gap: 10px;
   border-radius: 5px;
   font: inherit;
-  color: inherit;
+  color: $white-color;
   transition: background-color 0.3s ease;
   background-color: $accent-color;
 
   &:hover {
     background-color: $accent-color-hover;
+  }
+}
+
+.link {
+  color: $accent-color;
+  background-color: unset;
+  padding: unset;
+
+  &:hover {
+    color: $accent-color-hover;
+    background-color: unset;
+  }
+}
+
+.dark {
+  background-color: $primary-color;
+  line-height: 26px;
+
+  &:hover {
+    background-color: $button-dark-hover;
   }
 }
