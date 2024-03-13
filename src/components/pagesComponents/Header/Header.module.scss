@@ -58,6 +58,7 @@
         font-size: 30px;
         background-color: $primary-color;
         transition: transform 0.3s ease;
+        transform: translateY(-100dvh);
 
         .closeButton {
           display: block;
@@ -65,7 +66,7 @@
       }
 
       .show {
-        transform: translateY(-100dvh);
+        transform: unset;
       }
 
       .contacts {

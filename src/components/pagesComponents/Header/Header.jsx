@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { IconButton } from "../../UIComponents/IconButton";
+import { lockScroll, unlockScroll } from "../../../utils/navbar-scroll";
 import styles from "./Header.module.scss";
 import linkStyles from "../../UIComponents/IconButton/IconButton.module.scss";
-import { lockScroll, unlockScroll } from "../../../utils/navbar-scroll";
 
 export const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
@@ -10,7 +10,7 @@ export const Header = () => {
     setIsShowMenu(!isShowMenu);
     lockScroll();
   };
-  const mobileMenuClassName = `${styles.menu} ${isShowMenu ? "" : styles.show}`;
+  const mobileMenuClassName = `${styles.menu} ${isShowMenu ? styles.show : ""}`;
   const menuClose = () => {
     setIsShowMenu(false);
     unlockScroll();
