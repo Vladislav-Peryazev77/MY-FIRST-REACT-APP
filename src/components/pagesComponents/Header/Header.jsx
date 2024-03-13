@@ -7,8 +7,12 @@ import linkStyles from "../../UIComponents/IconButton/IconButton.module.scss";
 export const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const handleMenuVisibilityChange = () => {
+    if (isShowMenu) {
+      unlockScroll();
+    } else {
+      lockScroll();
+    }
     setIsShowMenu(!isShowMenu);
-    lockScroll();
   };
   const mobileMenuClassName = `${styles.menu} ${isShowMenu ? styles.show : ""}`;
   const menuClose = () => {
@@ -34,7 +38,6 @@ export const Header = () => {
             additionalClassname={styles.closeButton}
             onClick={handleMenuVisibilityChange}
             src="src/assets/icons/navbar-cross-icon.svg"
-            alt="navbar close icon"
           />
         </nav>
         <a href="tel:88000001122" className={`contacts ${styles.contacts}`}>
@@ -51,7 +54,6 @@ export const Header = () => {
           <IconButton
             onClick={handleMenuVisibilityChange}
             src="src/assets/icons/navbar-icon.svg"
-            alt="navbar icon"
           />
         </div>
       </div>

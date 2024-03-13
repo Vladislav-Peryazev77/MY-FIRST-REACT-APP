@@ -95,8 +95,20 @@
     }
   }
 
-  .tabText {
+  .tabContent {
     height: 350px;
     overflow-y: auto;
+
+    .tabText {
+      .description {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .tabTitle {
+        margin-top: 40px;
+        font-size: 24px;
+      }
+    }
   }
 }

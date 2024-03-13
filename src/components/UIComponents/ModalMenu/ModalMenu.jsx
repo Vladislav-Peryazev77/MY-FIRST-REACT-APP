@@ -98,20 +98,27 @@ export const ModalMenu = ({
             </div>
           </div>
         </div>
-        <div className={styles.tabText}>
-          <div className={styles.description}>
-            Сентябрь 1995 — Июнь 2000 <br />
-            Санкт-Петербургский политехнический университет Петра Великого{" "}
-            <br />
-            Факультет: Компьютерных наук и технологий
-            <br />
-            Специальность: Математика и компьютерные науки <br />
-            Форма обучения: Очная
+        <div className={styles.tabContent}>
+          <div className={styles.tabText}>
+            <div className={styles.description}>
+              Сентябрь 1995 — Июнь 2000 <br />
+              Санкт-Петербургский политехнический университет Петра Великого{" "}
+              <br />
+              Факультет: Компьютерных наук и технологий
+              <br />
+              Специальность: Математика и компьютерные науки <br />
+              Форма обучения: Очная
+            </div>
+            <h3 className={styles.tabTitle}>
+              <b>Курсы и тренинги</b>
+            </h3>
+            <div className={styles.description}>
+              Ноябрь 2020 — Февраль 2021 <br />
+              Программа дополнительного образования «3D Моделирование»
+              <br />
+              Место проведения: Институт дополнительного образования «Политех»
+            </div>
           </div>
-          <h3 className={styles.tabTitle}>
-            <b>Курсы и тренинги</b>
-          </h3>
-          <div className={styles.description}></div>
         </div>
       </div>
     </div>
