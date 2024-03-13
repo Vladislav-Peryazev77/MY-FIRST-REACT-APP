@@ -5,7 +5,6 @@ export const IconButton = ({
   visibilyty,
   additionalClassname,
   src,
-  alt,
 }) => {
   const buttonClassname = `${styles.button} ${visibilyty} ${
     additionalClassname ? additionalClassname : ""
@@ -13,7 +12,7 @@ export const IconButton = ({
 
   return (
     <button onClick={onClick} className={buttonClassname}>
-      <img src={src} alt={alt} className={styles.icon} />
+      <img src={src} className={styles.icon} />
     </button>
   );
 };

@@ -22,6 +22,9 @@
 
       .closeButton {
         display: none;
+        position: absolute;
+        top: 17px;
+        right: 15px;
       }
     }
 
@@ -58,13 +61,10 @@
 
         .closeButton {
           display: block;
-          position: absolute;
-          top: 17px;
-          right: 15px;
         }
       }
 
-      .hidden {
+      .show {
         transform: translateY(-100dvh);
       }
 
