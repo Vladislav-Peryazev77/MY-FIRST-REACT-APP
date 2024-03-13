@@ -4,16 +4,18 @@ import { BenefitsBlock } from "../../components/pagesComponents/homePage/Benefit
 import { CoachesBlock } from "../../components/pagesComponents/homePage/CoachesBlock";
 import { PackagesBlock } from "../../components/pagesComponents/homePage/PackagesBlock";
 import { RegistrationBlock } from "../../components/pagesComponents/homePage/RegistrationBlock";
+import { ModalMenu } from "../../components/UIComponents/ModalMenu/ModalMenu";
 
 export const Home = () => {
   return (
     <>
-      <PromoBlock />
+      {/* <PromoBlock />
       <StatsBlock />
       <BenefitsBlock />
       <CoachesBlock />
       <PackagesBlock />
-      <RegistrationBlock />
+      <RegistrationBlock /> */}
+      <ModalMenu />
     </>
   );
 };
