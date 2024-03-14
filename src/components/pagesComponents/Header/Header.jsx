@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IconButton } from "../../UIComponents/IconButton";
 import { lockScroll, unlockScroll } from "../../../utils/navbar-scroll";
 import styles from "./Header.module.scss";
@@ -6,18 +6,22 @@ import linkStyles from "../../UIComponents/IconButton/IconButton.module.scss";
 
 export const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
-  const handleMenuVisibilityChange = () => {
-    if (isShowMenu) {
+
+  useEffect(() => {
+    if (!isShowMenu) {
       unlockScroll();
-    } else {
-      lockScroll();
+      return;
     }
+
+    lockScroll();
+  }, [isShowMenu]);
+
+  const handleMenuVisibilityChange = () => {
     setIsShowMenu(!isShowMenu);
   };
   const mobileMenuClassName = `${styles.menu} ${isShowMenu ? styles.show : ""}`;
   const menuClose = () => {
     setIsShowMenu(false);
-    unlockScroll();
   };
 
   return (
