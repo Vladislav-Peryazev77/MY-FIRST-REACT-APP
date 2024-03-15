@@ -99,6 +99,10 @@ section {
   }
 }
 
+.lock {
+  overflow: hidden;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 100%;

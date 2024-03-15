@@ -1,22 +1,60 @@
+import React, { useState, useEffect } from "react";
 import { IconButton } from "../../UIComponents/IconButton";
+import { lockScroll, unlockScroll } from "../../../utils/navbar-scroll";
 import styles from "./Header.module.scss";
 import linkStyles from "../../UIComponents/IconButton/IconButton.module.scss";
 
 export const Header = () => {
+  const [isShowMenu, setIsShowMenu] = useState(false);
+
+  useEffect(() => {
+    if (!isShowMenu) {
+      unlockScroll();
+      return;
+    }
+
+    lockScroll();
+  }, [isShowMenu]);
+
+  const handleMenuVisibilityChange = () => {
+    setIsShowMenu(!isShowMenu);
+  };
+  const mobileMenuClassName = `${styles.menu} ${isShowMenu ? styles.show : ""}`;
+  const handleMenuClose = () => {
+    setIsShowMenu(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.content}>
         <div className="logo">ROBO.SCHOOL</div>
-        <nav className={`${styles.menu} ${styles.hidden}`}>
-          <a className={styles.menuItem} href="#stats">
+        <nav className={mobileMenuClassName}>
+          <a
+            onClick={handleMenuClose}
+            className={styles.menuItem}
+            href="#stats"
+          >
             О школе
           </a>
-          <a className={styles.menuItem} href="#coaches">
+          <a
+            onClick={handleMenuClose}
+            className={styles.menuItem}
+            href="#coaches"
+          >
             Тренеры
           </a>
-          <a className={styles.menuItem} href="#packages">
+          <a
+            onClick={handleMenuClose}
+            className={styles.menuItem}
+            href="#packages"
+          >
             Стоимость
           </a>
+          <IconButton
+            additionalClassname={styles.closeButton}
+            onClick={handleMenuVisibilityChange}
+            src="src/assets/icons/navbar-cross-icon.svg"
+          />
         </nav>
         <a href="tel:88000001122" className={`contacts ${styles.contacts}`}>
           +7 800 000 11 22
@@ -30,9 +68,8 @@ export const Header = () => {
             />
           </a>
           <IconButton
-            visibility={styles.navbarButton}
+            onClick={handleMenuVisibilityChange}
             src="src/assets/icons/navbar-icon.svg"
-            alt="navbar icon"
           />
         </div>
       </div>
