@@ -20,7 +20,7 @@ export const Header = () => {
     setIsShowMenu(!isShowMenu);
   };
   const mobileMenuClassName = `${styles.menu} ${isShowMenu ? styles.show : ""}`;
-  const menuClose = () => {
+  const handleMenuClose = () => {
     setIsShowMenu(false);
   };
 
@@ -29,13 +29,25 @@ export const Header = () => {
       <div className={styles.content}>
         <div className="logo">ROBO.SCHOOL</div>
         <nav className={mobileMenuClassName}>
-          <a onClick={menuClose} className={styles.menuItem} href="#stats">
+          <a
+            onClick={handleMenuClose}
+            className={styles.menuItem}
+            href="#stats"
+          >
             О школе
           </a>
-          <a onClick={menuClose} className={styles.menuItem} href="#coaches">
+          <a
+            onClick={handleMenuClose}
+            className={styles.menuItem}
+            href="#coaches"
+          >
             Тренеры
           </a>
-          <a onClick={menuClose} className={styles.menuItem} href="#packages">
+          <a
+            onClick={handleMenuClose}
+            className={styles.menuItem}
+            href="#packages"
+          >
             Стоимость
           </a>
           <IconButton
