@@ -1,5 +1,11 @@
 @import "src/styles/variables.scss";
 
+.modalContent {
+  width: 940px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
 .profile {
   display: flex;
   justify-content: space-between;
@@ -83,11 +89,4 @@
 .tabContent {
   height: 350px;
   overflow-y: auto;
-
-  .tabText {
-    // .description {
-    //   margin-top: 20px;
-    //   font-size: 20px;
-    // }
-  }
 }

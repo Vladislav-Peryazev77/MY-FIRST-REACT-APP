@@ -18,9 +18,25 @@ export const CoachModalContent = ({
 }) => {
   const [activeTab, setActiveTab] = useState("1");
 
-  const createActiveButtonClassName = (id) => {
+  const createButtonClassName = (id) => {
     return `${styles.tabButton} ${activeTab === id ? styles.activeTab : ""}`;
   };
+
+  const modalTabData = [
+    {
+      id: "1",
+      title: "Образование",
+    },
+    {
+      id: "2",
+      title: "Опыт работы",
+    },
+    {
+      id: "3",
+      title: "Награды",
+    },
+  ];
+
   return (
     <>
       <div className={styles.profile}>
@@ -38,7 +54,7 @@ export const CoachModalContent = ({
             <div className={styles.links}>
               {links.map((item) => {
                 return (
-                  <a className={styles.link} href={item.href}>
+                  <a key={item.href} className={styles.link} href={item.href}>
                     <img className={styles.icon} src={item.imagePath} />
                   </a>
                 );
@@ -48,48 +64,21 @@ export const CoachModalContent = ({
         </div>
       </div>
       <div className={styles.tabs}>
-        <div className={styles.tabWrapper}>
-          <div className={styles.tab}>
-            <Button
-              additionalClassname={createActiveButtonClassName("1")}
-              variant="link"
-              id="1"
-              onClick={() => {
-                setActiveTab("1");
-              }}
-            >
-              Образование
-            </Button>
-          </div>
-        </div>
-        <div className={styles.tabWrapper}>
-          <div className={styles.tab}>
-            <Button
-              additionalClassname={createActiveButtonClassName("2")}
-              variant="link"
-              id="2"
-              onClick={() => {
-                setActiveTab("2");
-              }}
-            >
-              Опыт работы
-            </Button>
-          </div>
-        </div>
-        <div className={styles.tabWrapper}>
-          <div className={styles.tab}>
-            <Button
-              additionalClassname={createActiveButtonClassName("3")}
-              variant="link"
-              id="3"
-              onClick={() => {
-                setActiveTab("3");
-              }}
-            >
-              Награды
-            </Button>
-          </div>
-        </div>
+        {modalTabData.map((tab) => {
+          return (
+            <div key={tab.id} className={styles.tabWrapper}>
+              <div className={styles.tab}>
+                <Button
+                  additionalClassname={createButtonClassName(tab.id)}
+                  variant="link"
+                  onClick={() => setActiveTab(tab.id)}
+                >
+                  {tab.title}
+                </Button>
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div className={styles.tabContent}>
         <div className={styles.tabText}>
