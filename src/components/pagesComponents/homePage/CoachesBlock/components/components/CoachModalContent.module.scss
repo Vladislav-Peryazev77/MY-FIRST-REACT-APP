@@ -1,0 +1,93 @@
+@import "src/styles/variables.scss";
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  .img {
+    flex-basis: 160px;
+    width: 160px;
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .name {
+        font-size: 24px;
+      }
+
+      .jobtitle {
+        color: $primary-color-opacity70;
+      }
+
+      .links {
+        display: flex;
+        gap: 7px;
+
+        .link {
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+
+    .closeButton {
+      color: $primary-color-opacity70;
+    }
+
+    .closeButtonIcon {
+      display: none;
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 20px;
+  border-bottom: 1px solid $grey-line-color;
+
+  .tabWrapper {
+    flex-basis: 33%;
+
+    .tab {
+      padding: 20px 0;
+
+      .tabButton {
+        color: $primary-color-opacity70;
+      }
+
+      .activeTab {
+        color: red;
+      }
+    }
+  }
+}
+
+.tabContent {
+  height: 350px;
+  overflow-y: auto;
+
+  .tabText {
+    // .description {
+    //   margin-top: 20px;
+    //   font-size: 20px;
+    // }
+  }
+}

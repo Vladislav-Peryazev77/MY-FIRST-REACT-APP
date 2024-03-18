@@ -1,5 +1,5 @@
 import styles from "./Button.module.scss";
-export const Button = ({ additionalClassname, children, variant }) => {
+export const Button = ({ additionalClassname, children, variant, onClick }) => {
   const createButtonVariant = () => {
     switch (true) {
       case variant === "link":
@@ -15,5 +15,9 @@ export const Button = ({ additionalClassname, children, variant }) => {
     additionalClassname ? additionalClassname : ""
   }`;
 
-  return <button className={buttonClassname}>{children}</button>;
+  return (
+    <button className={buttonClassname} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
