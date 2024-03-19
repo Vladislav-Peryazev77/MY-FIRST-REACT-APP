@@ -1,0 +1,1 @@
+export { CoachModalContent } from "./CoachModalContent";

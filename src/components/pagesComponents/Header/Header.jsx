@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IconButton } from "../../UIComponents/IconButton";
-import { lockScroll, unlockScroll } from "../../../utils/navbar-scroll";
+import { lockScroll, unlockScroll } from "../../../utils/scrollLocker";
 import styles from "./Header.module.scss";
 import linkStyles from "../../UIComponents/IconButton/IconButton.module.scss";
 

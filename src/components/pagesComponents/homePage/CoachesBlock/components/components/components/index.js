@@ -1,0 +1,1 @@
+export { CoachTabContent } from "./CoachTabContent";

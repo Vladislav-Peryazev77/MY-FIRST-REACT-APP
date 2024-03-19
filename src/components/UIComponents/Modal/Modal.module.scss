@@ -1,0 +1,60 @@
+@import "src/styles/variables.scss";
+
+.modalWrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100dvh;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modalBackdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $black-color-opacity70;
+  }
+
+  .modalContent {
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    max-width: 90%;
+    max-height: 90%;
+
+    .modalBaseCloseBtn {
+      color: $primary-color-opacity70;
+      position: absolute;
+      right: 40px;
+      top: 27px;
+    }
+
+    .text {
+      display: block;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modalWrapper {
+    .modalContent {
+      width: 100%;
+      height: 100%;
+
+      .text {
+        display: none;
+      }
+
+      .icon {
+        display: block;
+      }
+    }
+  }
+}
