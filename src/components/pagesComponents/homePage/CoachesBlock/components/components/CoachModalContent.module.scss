@@ -2,8 +2,7 @@
 
 .modalContent {
   width: 940px;
-  max-width: 90%;
-  max-height: 90%;
+  padding: 40px;
 }
 
 .profile {
@@ -67,7 +66,7 @@
   align-items: flex-start;
   justify-content: space-between;
   font-size: 20px;
-  border-bottom: 1px solid $grey-line-color;
+  border-bottom: $grey-border;
 
   .tabWrapper {
     flex-basis: 33%;

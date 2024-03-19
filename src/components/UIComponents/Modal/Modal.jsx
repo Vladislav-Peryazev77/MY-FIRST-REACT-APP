@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
-import { Button } from "../Button";
 import { createPortal } from "react-dom";
 import { lockScroll, unlockScroll } from "../../../utils/scrollLocker";
 
 import styles from "./Modal.module.scss";
-import modalContentStyles from "../../pagesComponents/homePage/CoachesBlock/components/components/CoachModalContent.module.scss";
-
 export const Modal = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     if (!isOpen) {
@@ -32,9 +29,7 @@ export const Modal = ({ isOpen, onClose, children }) => {
             className={styles.modalBackdrop}
             onClick={handleCloseModal}
           ></div>
-          <div
-            className={`${styles.modalContent} ${modalContentStyles.modalContent}`}
-          >
+          <div className={styles.modalContent}>
             <button
               className={styles.modalBaseCloseBtn}
               onClick={handleCloseModal}

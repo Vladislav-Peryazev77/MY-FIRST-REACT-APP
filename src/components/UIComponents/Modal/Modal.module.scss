@@ -22,7 +22,8 @@
     position: relative;
     background-color: #fff;
     border-radius: 20px;
-    padding: 40px;
+    max-width: 90%;
+    max-height: 90%;
 
     .modalBaseCloseBtn {
       color: $primary-color-opacity70;

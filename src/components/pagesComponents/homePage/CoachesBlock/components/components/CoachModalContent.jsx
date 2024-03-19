@@ -38,7 +38,7 @@ export const CoachModalContent = ({
   ];
 
   return (
-    <>
+    <div className={styles.modalContent}>
       <div className={styles.profile}>
         <img
           className={styles.img}
@@ -89,6 +89,6 @@ export const CoachModalContent = ({
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
