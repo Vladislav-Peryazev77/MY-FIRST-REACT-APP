@@ -76,10 +76,14 @@
 
       .tabButton {
         color: $primary-color-opacity70;
+
+        &:hover {
+          color: $accent-color;
+        }
       }
 
       .activeTab {
-        color: red;
+        color: $accent-color;
       }
     }
   }
@@ -88,4 +92,70 @@
 .tabContent {
   height: 350px;
   overflow-y: auto;
+}
+
+@media (max-width: 990px) {
+  .modalContent {
+    width: 100vw;
+    height: 100dvh;
+
+    .tabContent {
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    display: none;
+    .tabWrapper {
+      flex-basis: unset;
+    }
+  }
+
+  .profile {
+    .img {
+      flex-basis: 120px;
+      width: 120px;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .modalContent {
+    padding: 20px;
+
+    .profile {
+      gap: 10px;
+
+      .img {
+        width: 60px;
+        height: auto;
+        flex-basis: 60px;
+      }
+      .content {
+        gap: unset;
+
+        .info {
+          gap: unset;
+
+          .name {
+            font-size: 16px;
+          }
+
+          .jobtitle {
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 16.8px;
+          }
+
+          .links {
+            margin-top: 10px;
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
 }
