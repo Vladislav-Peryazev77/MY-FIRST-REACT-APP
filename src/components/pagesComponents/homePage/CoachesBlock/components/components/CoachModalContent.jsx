@@ -23,8 +23,8 @@ export const CoachModalContent = ({
     return `${styles.tabButton} ${activeTab === value ? styles.activeTab : ""}`;
   };
 
-  const onSelect = (newTab) => {
-    setActiveTab(newTab);
+  const changeActiveTab = (tab) => {
+    setActiveTab(tab);
   };
 
   const values = [
@@ -76,7 +76,12 @@ export const CoachModalContent = ({
           );
         })}
       </div>
-      <Dropdown values={values} value={activeTab} onSelect={onSelect} />
+      <Dropdown
+        values={values}
+        value={activeTab}
+        additionalClassname={styles.dropdown}
+        onSelect={changeActiveTab}
+      />
       <div className={styles.tabContent}>
         <div className={styles.tabText}>
           <div className={styles.description}>

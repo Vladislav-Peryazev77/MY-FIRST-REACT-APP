@@ -2,10 +2,8 @@
 
 .dropdown {
   position: relative;
-  display: none;
-  margin-top: 20px;
 
-  .select {
+  .selected {
     background-color: $accent-color;
     color: $white-color;
     padding: 10px 0;
@@ -27,6 +25,8 @@
 
       .arrow {
         transition: transform 0.3s ease;
+        width: 10px;
+        height: 10px;
       }
 
       .arrowRotate {
@@ -60,17 +60,11 @@
       background-color: $dropdown-active-color;
     }
   }
-
-  .show {
-    display: block;
-  }
 }
 
 @media (max-width: 768px) {
   .dropdown {
-    display: block;
-
-    .select {
+    .selected {
       &:hover {
         background-color: $accent-color;
       }

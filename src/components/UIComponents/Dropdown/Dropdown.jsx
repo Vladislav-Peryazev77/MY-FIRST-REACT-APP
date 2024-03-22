@@ -1,47 +1,53 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
+import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 import styles from "./Dropdown.module.scss";
 
-export const Dropdown = ({ values, onSelect, value }) => {
+export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
+  const dropdownClassName = `${styles.dropdown} ${
+    additionalClassname ? additionalClassname : ""
+  }`;
+
   const [isShowMenu, setIsShowMenu] = useState(false);
 
-  const createActiveTitle = () => {
-    let foundValue = values.find((el) => el.value === value).title;
-
-    return foundValue ? foundValue : "";
+  const handleMenuClose = () => {
+    setIsShowMenu(false);
   };
 
   const handleMenuVisibilityChange = () => {
-    setIsShowMenu(!isShowMenu);
+    setIsShowMenu((prevState) => !prevState);
   };
 
-  const handleActiveTab = (tab) => {
-    onSelect(tab);
-    setIsShowMenu(!isShowMenu);
+  const handleActiveElement = (element) => {
+    onSelect(element);
+    handleMenuClose();
   };
 
-  const menuRef = useRef();
-  useEffect(() => {
-    let handler = (event) => {
-      if (!menuRef.current.contains(event.target)) {
-        setIsShowMenu(false);
-      }
-    };
+  const dropdownArrowClassName = `${styles.arrow} ${
+    isShowMenu ? styles.arrowRotate : ""
+  }`;
 
-    document.addEventListener("mousedown", handler);
+  const createActiveTitle = () => {
+    let foundValue = values.find((element) => element.value === value);
 
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
-  });
+    return foundValue.title ? foundValue.title : "";
+  };
+
+  const createDropdownElementClassname = (item) => {
+    return createActiveTitle() === item.title ? styles.activeDropdown : "";
+  };
+
+  const ref = useRef();
+  useOnClickOutside(ref, () => handleMenuClose());
 
   return (
-    <div className={styles.dropdown} ref={menuRef}>
-      <div className={styles.select} onClick={handleMenuVisibilityChange}>
-        <div className={styles.selected}>{createActiveTitle()}</div>
+    <div className={dropdownClassName} ref={ref}>
+      <div className={styles.selected} onClick={handleMenuVisibilityChange}>
+        <div className={styles.title}>{createActiveTitle()}</div>
         <div className={styles.arrowWrapper}>
           <img
-            className={styles.arrow}
+            id="arrow"
+            className={dropdownArrowClassName}
             src="src/assets/icons/arrow-down-icon.svg"
           />
         </div>
@@ -52,15 +58,14 @@ export const Dropdown = ({ values, onSelect, value }) => {
             return (
               <li
                 key={item.value}
-                onClick={() => handleActiveTab(item.value)}
-                value={item.value}
-                className={
-                  createActiveTitle() === item.title
-                    ? styles.activeDropdown
-                    : ""
-                }
+                className={createDropdownElementClassname(item)}
               >
-                {item.title}
+                <div
+                  onClick={() => handleActiveElement(item.value)}
+                  value={item.value}
+                >
+                  {item.title}
+                </div>
               </li>
             );
           })}
