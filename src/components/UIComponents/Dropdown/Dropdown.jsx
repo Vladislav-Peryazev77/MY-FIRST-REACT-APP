@@ -4,11 +4,10 @@ import useOnClickOutside from "../../../hooks/useOnClickOutside";
 import styles from "./Dropdown.module.scss";
 
 export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
-  const dropdownClassName = `${styles.dropdown} ${
-    additionalClassname ? additionalClassname : ""
-  }`;
-
   const [isShowMenu, setIsShowMenu] = useState(false);
+
+  const ref = useRef();
+  useOnClickOutside(ref, () => handleMenuClose());
 
   const handleMenuClose = () => {
     setIsShowMenu(false);
@@ -18,10 +17,14 @@ export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
     setIsShowMenu((prevState) => !prevState);
   };
 
-  const handleActiveElement = (element) => {
-    onSelect(element);
+  const handleActiveSelect = (select) => {
+    onSelect(select);
     handleMenuClose();
   };
+
+  const dropdownClassName = `${styles.dropdown} ${
+    additionalClassname ? additionalClassname : ""
+  }`;
 
   const dropdownArrowClassName = `${styles.arrow} ${
     isShowMenu ? styles.arrowRotate : ""
@@ -36,9 +39,6 @@ export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
   const createDropdownElementClassname = (item) => {
     return createActiveTitle() === item.title ? styles.activeDropdown : "";
   };
-
-  const ref = useRef();
-  useOnClickOutside(ref, () => handleMenuClose());
 
   return (
     <div className={dropdownClassName} ref={ref}>
@@ -61,7 +61,7 @@ export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
                 className={createDropdownElementClassname(item)}
               >
                 <div
-                  onClick={() => handleActiveElement(item.value)}
+                  onClick={() => handleActiveSelect(item.value)}
                   value={item.value}
                 >
                   {item.title}
