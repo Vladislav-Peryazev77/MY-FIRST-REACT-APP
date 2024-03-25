@@ -1,4 +1,4 @@
-import styles from "./Input.module.scss";
+import styles from './Input.module.scss';
 
 export const Input = ({
   type,
@@ -6,9 +6,10 @@ export const Input = ({
   additionalClassname,
   id,
   pattern,
+  onChange,
 }) => {
   const inputClassname = `${styles.input} ${
-    additionalClassname ? additionalClassname : ""
+    additionalClassname ? additionalClassname : ''
   }`;
 
   return (
@@ -18,6 +19,7 @@ export const Input = ({
       type={type}
       placeholder={placeholder}
       className={inputClassname}
+      onChange={onChange}
     ></input>
   );
 };
