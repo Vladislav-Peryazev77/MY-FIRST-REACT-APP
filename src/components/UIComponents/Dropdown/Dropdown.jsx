@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
-import useOnClickOutside from "../../../hooks/useOnClickOutside";
+import React, { useRef, useState } from 'react';
+import useOnClickOutside from '../../../hooks/useOnClickOutside';
 
-import styles from "./Dropdown.module.scss";
+import styles from './Dropdown.module.scss';
 
 export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
   const [isShowMenu, setIsShowMenu] = useState(false);
@@ -23,21 +23,21 @@ export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
   };
 
   const dropdownClassName = `${styles.dropdown} ${
-    additionalClassname ? additionalClassname : ""
+    additionalClassname ? additionalClassname : ''
   }`;
 
   const dropdownArrowClassName = `${styles.arrow} ${
-    isShowMenu ? styles.arrowRotate : ""
+    isShowMenu ? styles.arrowRotate : ''
   }`;
 
   const createActiveTitle = () => {
     let foundValue = values.find((element) => element.value === value);
 
-    return foundValue.title ? foundValue.title : "";
+    return foundValue.title ? foundValue.title : '';
   };
 
   const createDropdownElementClassname = (item) => {
-    return createActiveTitle() === item.title ? styles.activeDropdown : "";
+    return createActiveTitle() === item.title ? styles.activeDropdown : '';
   };
 
   return (
