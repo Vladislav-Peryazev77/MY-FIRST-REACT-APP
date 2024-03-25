@@ -60,12 +60,12 @@ export const Dropdown = ({ values, onSelect, value, additionalClassname }) => {
                 key={item.value}
                 className={createDropdownElementClassname(item)}
               >
-                <div
+                <button
+                  className={styles.menuButton}
                   onClick={() => handleActiveSelect(item.value)}
-                  value={item.value}
                 >
                   {item.title}
-                </div>
+                </button>
               </li>
             );
           })}
