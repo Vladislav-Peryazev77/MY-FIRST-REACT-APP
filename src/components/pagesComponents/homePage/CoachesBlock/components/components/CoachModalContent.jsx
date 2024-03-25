@@ -4,6 +4,7 @@ import { Button } from "../../../../../UIComponents/Button";
 import styles from "./CoachModalContent.module.scss";
 import { coachesImages } from "../../../../../../assets/images";
 import { CoachTabContent } from "./components";
+import { Dropdown } from "../../../../../UIComponents/Dropdown";
 
 export const CoachModalContent = ({
   coach: {
@@ -16,25 +17,20 @@ export const CoachModalContent = ({
     links,
   },
 }) => {
-  const [activeTab, setActiveTab] = useState("1");
+  const [activeTab, setActiveTab] = useState("education");
 
-  const createButtonClassName = (id) => {
-    return `${styles.tabButton} ${activeTab === id ? styles.activeTab : ""}`;
+  const createButtonClassName = (value) => {
+    return `${styles.tabButton} ${activeTab === value ? styles.activeTab : ""}`;
   };
 
-  const modalTabData = [
-    {
-      id: "1",
-      title: "Образование",
-    },
-    {
-      id: "2",
-      title: "Опыт работы",
-    },
-    {
-      id: "3",
-      title: "Награды",
-    },
+  const changeActiveTab = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const values = [
+    { title: "Образование", value: "education" },
+    { title: "Опыт работы", value: "experience" },
+    { title: "Награды", value: "achievements" },
   ];
 
   return (
@@ -64,14 +60,14 @@ export const CoachModalContent = ({
         </div>
       </div>
       <div className={styles.tabs}>
-        {modalTabData.map((tab) => {
+        {values.map((tab) => {
           return (
-            <div key={tab.id} className={styles.tabWrapper}>
+            <div key={tab.value} className={styles.tabWrapper}>
               <div className={styles.tab}>
                 <Button
-                  additionalClassname={createButtonClassName(tab.id)}
+                  additionalClassname={createButtonClassName(tab.value)}
                   variant="link"
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => setActiveTab(tab.value)}
                 >
                   {tab.title}
                 </Button>
@@ -80,12 +76,20 @@ export const CoachModalContent = ({
           );
         })}
       </div>
+      <Dropdown
+        values={values}
+        value={activeTab}
+        additionalClassname={styles.dropdown}
+        onSelect={changeActiveTab}
+      />
       <div className={styles.tabContent}>
         <div className={styles.tabText}>
           <div className={styles.description}>
-            {activeTab === "1" && <CoachTabContent arr={education} />}
-            {activeTab === "2" && <CoachTabContent arr={experience} />}
-            {activeTab === "3" && <CoachTabContent arr={achievements} />}
+            {activeTab === "education" && <CoachTabContent arr={education} />}
+            {activeTab === "experience" && <CoachTabContent arr={experience} />}
+            {activeTab === "achievements" && (
+              <CoachTabContent arr={achievements} />
+            )}
           </div>
         </div>
       </div>
