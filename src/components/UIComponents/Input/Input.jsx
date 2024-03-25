@@ -5,8 +5,7 @@ export const Input = ({
   placeholder,
   additionalClassname,
   id,
-  pattern,
-  onChange,
+  register,
 }) => {
   const inputClassname = `${styles.input} ${
     additionalClassname ? additionalClassname : ''
@@ -15,11 +14,10 @@ export const Input = ({
   return (
     <input
       id={id}
-      pattern={pattern}
       type={type}
       placeholder={placeholder}
       className={inputClassname}
-      onChange={onChange}
+      {...register}
     ></input>
   );
 };
